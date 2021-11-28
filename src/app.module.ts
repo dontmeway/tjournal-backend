@@ -8,6 +8,7 @@ import { TypeOrmModule } from "@nestjs/typeorm"
 import { UserEntity } from './user/entities/user.entity';
 import { PostModule } from './post/post.module';
 import { CommentModule } from './comment/comment.module';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: "postgres",
@@ -21,7 +22,8 @@ import { CommentModule } from './comment/comment.module';
   }),
     UserModule,
     PostModule,
-    CommentModule],
+    CommentModule,
+    AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -21,6 +21,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
             throw new UnauthorizedException("Нет доступа")
         }
 
-        return { id: payload.sub, email: payload.email }
+        return {
+            id: payload.sub,
+            email: payload.email,
+        }
     }
 }

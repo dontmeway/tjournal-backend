@@ -7,8 +7,8 @@ export class PostEntity {
     @Column()
     title: string;
 
-    @Column()
-    body: string;
+    @Column({ type: 'jsonb' })
+    body: any[];
 
     @Column({
         default: 0
